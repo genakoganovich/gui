@@ -10,6 +10,7 @@ class MainWindow(QMainWindow):
         self.label = QLabel("Click in this window")
         self.setCentralWidget(self.label)
 
+
     def mouseMoveEvent(self, e):
         self.label.setText("mouseMoveEvent")
 
