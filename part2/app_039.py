@@ -16,6 +16,17 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("My Awesome App")
 
+        label = QLabel("Hello!")
+        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.setCentralWidget(label)
+
+        toolbar = QToolBar("My main toolbar")
+        self.addToolBar(toolbar)
+
+    def onMyToolBarButtonClick(self, s):
+        print("click", s)
+
 
 app = QApplication(sys.argv)
 w = MainWindow()
